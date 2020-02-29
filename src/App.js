@@ -14,7 +14,6 @@ function App() {
     let pokemon = await res.json();
     setTheCount(pokemon.count);
     setResult(pokemon.results);
-    console.log(pokemon);
   };
 
   useEffect(() => {
@@ -25,13 +24,19 @@ function App() {
     <div className='App'>
       <img src={pokemonImage} alt='Pokemon Logo' className='pokemonLogo' />
       <p className='results-chars'>
-        {result.map(x => (
-          <span key={x.name} className='chars'>
+        {result.map((x, i) => (
+          <span key={x.name} title={x.name} className='chars'>
+            <img
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i +
+                1}.png`}
+              alt={x.name}
+            />
+            <br />
             {x.name}
           </span>
         ))}
       </p>
-      <p className='results-number'>0 - 20 of {theCount} Results</p>
+      <p className='results-number'>0 - 20 of {theCount} results</p>
     </div>
   );
 }

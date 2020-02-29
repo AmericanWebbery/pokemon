@@ -22,13 +22,24 @@ html {
 .results-number {
   font-size: 1.3rem;
   width: 100%;
-  background-color: #dedede;
+  background-color: #2d69b3;
   padding: 10px;
   text-align: center;
+  color: #fff;
+}
+
+.results-chars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1.5em;
 }
 
 .chars {
-  font-size: 1.5rem;
-  padding: 5px;
-  display: inline-block;
+  font-size: 2.6rem;
+  padding: 15px 0;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: 0 5px 10px #e8e8e8;
 }
