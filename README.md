@@ -1,3 +1,3 @@
 # Pokemon Lookup
 
-Uses the Pokemon API
+Uses the [Poke API](https://pokeapi.co/)
